@@ -1,3 +1,4 @@
+import React from 'react';
 import './css/App.css';
 import Table from './components/Table';
 import { useStateValue } from "./providers/StateProvider";

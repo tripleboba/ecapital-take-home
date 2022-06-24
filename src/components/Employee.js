@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useStateValue} from '../providers/StateProvider';
+import CurrencyFormat from 'react-currency-format';
 
 function Employee(props) {
   const {id, firstName, lastName, salary } = props;
