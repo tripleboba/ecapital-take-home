@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
-// import data from '../db/mock-employees.json';
+import React from 'react'
+import { useStateValue } from '../providers/StateProvider';
 import Employee from './Employee';
+import Form from './Form';
 
 function Table(props) {
-  
-  const {employeesList} = props;
+
+  // const { employeesList } = props;
+  const [{employeesList}] = useStateValue();
   const listOfEmployees = employeesList.map((employee, index) => (
-    <Employee 
+    <Employee
       key={index}
       {...employee}
       id={index}
@@ -28,11 +30,8 @@ function Table(props) {
           {listOfEmployees}
         </tbody>
       </table>
-
-      <button>add new employee</button>
-
+      <Form />
     </div>
-
   )
 }
 

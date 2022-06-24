@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useStateValue } from '../providers/StateProvider';
 import CurrencyFormat from 'react-currency-format';
 
@@ -14,7 +14,7 @@ function Employee(props) {
   }
 
   const deleteEmployee = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     dispatch({
       type: 'DELETE_EMPLOYEE',
       id: id,
