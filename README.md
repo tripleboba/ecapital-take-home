@@ -17,19 +17,19 @@ Create an Employee Table like seen in the image below. Use any framework (Angula
       * $ ng serve --open
 
 ### The table should have ###
-* List all employees in mock-employee.json
-  * First name, last name, and salary in currency (ie. $42,000)
+- [x] List all employees in mock-employee.json
+  - [x] First name, last name, and salary in currency (ie. $42,000)
 * Ability to edit the employee information
-* Ability to delete the employee
+- [x] Ability to delete the employee
 * Ability to add or create a new employee with a first name, last name, and salary
 
 ### Guidelines ###
 * Structure your application and components in a modular/reusable way
 * Commit code with useful and informative comments
-* Use mock data (mock-employees.json)
-* Do not implement API code
-  * You can mimic a API call by creating a service but return only mock data
-* Adding, deleting, or editing employees does not write back to the mock-employees.json file
+- [x] Use mock data (mock-employees.json)
+- [x] Do not implement API code
+  - You can mimic a API call by creating a service but return only mock data
+- [x] Adding, deleting, or editing employees does not write back to the mock-employees.json file
 * Styling: CSS or SCSS can be used, whichever you prefer (can use popular frameworks like Bootstrap as well)
 
 ---
