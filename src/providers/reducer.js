@@ -25,7 +25,7 @@ const reducer = (state, action) => {
         employeesList: [...state.employeesList, action.employee],
       };
     case 'DELETE_EMPLOYEE':
-      const index = 0;  // init set to pass index correctly later
+      const index = action.id;
       let tempList = [...state.employeesList];
       tempList.splice(index, 1);
       return {
