@@ -24,7 +24,7 @@ export default function Form() {
 
   const addEmployee = (e) => {
     e.preventDefault();
-    console.log("newEmployee:>>>>>>", newEmployee);
+    console.log("newEmployee data from Form.js", newEmployee);
     dispatch({
       type: 'ADD_EMPLOYEE',
       employee: newEmployee,

@@ -19,18 +19,18 @@ Create an Employee Table like seen in the image below. Use any framework (Angula
 ### The table should have ###
 - [x] List all employees in mock-employee.json
   - [x] First name, last name, and salary in currency (ie. $42,000)
-- [] Ability to edit the employee information
+- [ ] Ability to edit the employee information
 - [x] Ability to delete the employee
 - [x] Ability to add or create a new employee with a first name, last name, and salary
 
 ### Guidelines ###
-- [] Structure your application and components in a modular/reusable way
-- [] Commit code with useful and informative comments
+- [ ] Structure your application and components in a modular/reusable way
+- [ ] Commit code with useful and informative comments
 - [x] Use mock data (mock-employees.json)
 - [x] Do not implement API code
   - You can mimic a API call by creating a service but return only mock data
 - [x] Adding, deleting, or editing employees does not write back to the mock-employees.json file
-- [] Styling: CSS or SCSS can be used, whichever you prefer (can use popular frameworks like Bootstrap as well)
+- [ ] Styling: CSS or SCSS can be used, whichever you prefer (can use popular frameworks like Bootstrap as well)
 
 ---
 
