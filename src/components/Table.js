@@ -3,9 +3,8 @@ import React, { useState } from 'react'
 import Employee from './Employee';
 
 function Table(props) {
+  
   const {employeesList} = props;
-  // const [employeesList, setEmployeesList] = useState(data["employees"]);
-
   const listOfEmployees = employeesList.map((employee, index) => (
     <Employee 
       key={index}

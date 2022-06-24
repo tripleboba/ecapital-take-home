@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {useStateValue} from '../providers/StateProvider';
 
 function Employee(props) {
   const {id, firstName, lastName, salary } = props;
+  const [{employeesList}, dispatch] = useStateValue();
+  console.log("[from <Employee>]: current employeesList:",employeesList);
 
   // button handlers
   const editHandler = (e) => {
@@ -11,6 +14,10 @@ function Employee(props) {
   
   const deleteHandler = (e) => {
     e.preventDefault();
+    dispatch({
+      type: 'DELETE_EMPLOYEE',
+      id: id,
+    })
   } 
   return (
     <tr>
