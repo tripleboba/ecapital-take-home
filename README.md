@@ -32,8 +32,6 @@ Create an Employee Table like seen in the image below. Use any framework (Angula
 * Adding, deleting, or editing employees does not write back to the mock-employees.json file
 * Styling: CSS or SCSS can be used, whichever you prefer (can use popular frameworks like Bootstrap as well)
 
-### Questions? ###
-Please reach out to HR or reply to the calendar invite with any questions
 ---
 
 ## Create-React-App instruction

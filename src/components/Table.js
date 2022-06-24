@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
-import data from '../db/mock-employees.json';
+// import data from '../db/mock-employees.json';
+import Employee from './Employee';
 
-function Table() {
+function Table(props) {
+  const {employeesList} = props;
+  // const [employeesList, setEmployeesList] = useState(data["employees"]);
 
-  const [employees, setEmployees] = useState(data["employees"]);
-  const listOfEmployees = employees.map((employee, index) => (
-    <tr key={index}>
-      <td>{employee.firstName}</td>
-      <td>{employee.lastName}</td>
-      <td>{employee.salary}</td>
-      <td>
-        <button>edit</button>
-        <button>delete</button>
-      </td>
-    </tr>
+  const listOfEmployees = employeesList.map((employee, index) => (
+    <Employee 
+      key={index}
+      {...employee}
+      id={index}
+    />
   ))
 
   return (
@@ -22,9 +20,9 @@ function Table() {
       <table>
         <thead>
           <tr>
-            <th>first name</th>
-            <th>last name</th>
-            <th>salary</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Salary</th>
           </tr>
         </thead>
         <tbody>

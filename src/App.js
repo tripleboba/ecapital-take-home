@@ -1,12 +1,14 @@
 import './css/App.css';
 import Table from './components/Table';
+import { useStateValue } from "./providers/StateProvider";
 
-function App() {
+export default function App() {
+  const [{employeesList}] = useStateValue();
+  
   return (
     <div className="App">
-      <Table></Table>
+      <Table employeesList={employeesList}/>
     </div>
   );
 }
 
-export default App;
