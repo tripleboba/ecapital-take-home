@@ -4,16 +4,16 @@ import {useStateValue} from '../providers/StateProvider';
 function Employee(props) {
   const {id, firstName, lastName, salary } = props;
   const [{employeesList}, dispatch] = useStateValue();
-  console.log("[from <Employee>]: current employeesList:",employeesList);
+  console.log("current employeesList from Employee.js: ",employeesList);
 
   // button handlers
-  const editHandler = (e) => {
+  const editEmployee = (e) => {
     e.preventDefault();
     console.log(id);
   }
   
-  const deleteHandler = (e) => {
-    e.preventDefault();
+  const deleteEmployee = (e) => {
+    // e.preventDefault();
     dispatch({
       type: 'DELETE_EMPLOYEE',
       id: id,
@@ -25,8 +25,8 @@ function Employee(props) {
       <td>{lastName}</td>
       <td>{salary}</td>
       <td>
-      <button onClick={editHandler}>edit</button>
-      <button onClick={deleteHandler}>delete</button>
+      <button onClick={editEmployee}>edit</button>
+      <button onClick={deleteEmployee}>delete</button>
     </td>
     </tr>
   )
