@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import { useStateValue } from '../providers/StateProvider';
 
+// SHOULD BE HIDDEN - IMPLEMENTED LATER!!!!!
+// button clicked -> inline form with save/cancel - similar to edit button
 
 export default function Form() {
-  const [{}, dispatch] = useStateValue();
+  const [{employeeList}, dispatch] = useStateValue();
 
   const [newEmployee, setNewEmployee] = useState({
     firstName: '',
