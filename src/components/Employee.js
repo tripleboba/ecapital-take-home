@@ -3,6 +3,7 @@ import { useStateValue } from '../providers/StateProvider';
 import InlineForm from './InlineForm';
 import CurrencyFormat from 'react-currency-format';
 
+
 function Employee(props) {
   const { id, ...employee} = props;
 
@@ -50,7 +51,8 @@ function Employee(props) {
           />
         </td>
         <td>
-          <button onClick={editEmployee}>edit</button>
+          <button
+          onClick={editEmployee}>edit</button>
           <button onClick={deleteEmployee}>delete</button>
         </td>
       </tr>
