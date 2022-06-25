@@ -38,28 +38,28 @@ export default function Form() {
     <div className='field is-horizontal'>
       <div className='field-body'>
         <div className='field'>
-          <input className='input'
+          <input className='input is-small'
             type='text' name='firstName'
             placeholder='enter first name'
             onChange={onChangeHandler}
           />
         </div>
         <div className='field'>
-          <input className='input'
+          <input className='input is-small'
             type='text' name='lastName'
             placeholder='enter last name'
             onChange={onChangeHandler}
           />
         </div>
         <div className='field'>
-          <input className='input'
+          <input className='input is-small'
             type='number' name='salary'
             placeholder='enter salary'
             onChange={onChangeHandler}
           />
         </div>
         <div className='field'>
-          <button className='button is-success is-pulled-right'
+          <button className='button is-small is-success is-pulled-right'
             type='submit'
             onClick={addEmployee}
           >Add Employee</button>
