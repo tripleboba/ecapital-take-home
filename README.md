@@ -1,21 +1,6 @@
 ## eCapital Software Engineer Take-home Assignment #
 
-### Goal
-Create an Employee Table like seen in the image below. Use any framework (Angular, React, Vue, ect...) or CSS library you would like to accomplish this
-
-![](display/employee-table-example.png)
-
-### Setup ###
-* Fork the repository onto your own personal github account
-* Setup new project with framework of your choice or create static site
-  * Angular example setup
-      * Install Node.js v18
-      * $ cd ecapital-dev-candidate
-      * $ npm install -g @angular/cli
-      * $ ng new employee-table
-      * $ cd employee-table
-      * $ ng serve --open
-
+### Submission
 ### The table should have ###
 - [x] List all employees in mock-employee.json
   - [x] First name, last name, and salary in currency (ie. $42,000)
@@ -31,6 +16,26 @@ Create an Employee Table like seen in the image below. Use any framework (Angula
   - You can mimic a API call by creating a service but return only mock data
 - [x] Adding, deleting, or editing employees does not write back to the mock-employees.json file
 - [x] Styling: CSS or SCSS can be used, whichever you prefer (can use popular frameworks like Bootstrap as well) [using Bulma]
+
+![](display/add.png)
+![](display/delete.png)
+![](display/edit.png)
+
+### Goal
+Create an Employee Table like seen in the image below. Use any framework (Angular, React, Vue, ect...) or CSS library you would like to accomplish this
+
+![](display/employee-table-example.png)
+
+### Setup ###
+* Fork the repository onto your own personal github account
+* Setup new project with framework of your choice or create static site
+  * Angular example setup
+      * Install Node.js v18
+      * $ cd ecapital-dev-candidate
+      * $ npm install -g @angular/cli
+      * $ ng new employee-table
+      * $ cd employee-table
+      * $ ng serve --open
 
 ---
 
