@@ -14,7 +14,7 @@ const reducer = (state, action) => {
   console.log(action);
 
   switch (action.type) {
-    case 'UPDATE_EMPLOYEESLIST':
+    case 'UPDATE_EMPLOYEESLIST':  // bug implementation
       return {
         ...state,
         employeesList: [...action.employees]

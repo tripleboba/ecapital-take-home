@@ -13,7 +13,6 @@ export default function Form() {
     salary: ''
   });
 
-  // capture inputs
   const onChangeHandler = (e) => {
     e.preventDefault();
     const inputFieldName = e.target.getAttribute('name');
@@ -27,7 +26,6 @@ export default function Form() {
   const addEmployee = (e) => {
     e.preventDefault();
     console.log("newEmployee data from Form.js", newEmployee);
-
     dispatch({
       type: 'ADD_EMPLOYEE',
       employee: newEmployee,
@@ -43,6 +41,7 @@ export default function Form() {
             placeholder='enter first name'
             onChange={onChangeHandler}
           />
+          {/* <p className='help is-danger'>this field is required</p> */}
         </div>
         <div className='field'>
           <input className='input is-small'
