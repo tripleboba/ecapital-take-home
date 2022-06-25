@@ -59,7 +59,7 @@ export default function Form() {
           />
         </div>
         <div className='field'>
-          <button className='button is-small is-success is-pulled-right'
+          <button className='button is-small is-success is-outlined is-pulled-right'
             type='submit'
             onClick={addEmployee}
           >Add Employee</button>
