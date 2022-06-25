@@ -1,20 +1,23 @@
 import React, { Fragment, useState } from 'react'
 import { useStateValue } from '../providers/StateProvider';
-import CurrencyFormat from 'react-currency-format';
 import InlineForm from './InlineForm';
+import CurrencyFormat from 'react-currency-format';
 
 function Employee(props) {
-  const { id, firstName, lastName, salary } = props;
+  const { id, ...employee} = props;
+
   const [{ employeesList }, dispatch] = useStateValue();
   console.log("current employeesList from Employee.js: ", employeesList);
 
   const [trigger, setTrigger] = useState(false);
+  // const [currEmployee, setCurrEmpolyee] = useState(employeesList[id]);
 
   // button handlers
   const editEmployee = (e) => {
     e.preventDefault();
     console.log("edit clicked index-id in Employee.js:", id);
     setTrigger(true);
+
     // // get the value in table row
     // let tr = document.getElementsByTagName("tr")[id + 1];
     // console.log("tr: ", tr);
@@ -29,17 +32,18 @@ function Employee(props) {
       type: 'DELETE_EMPLOYEE',
       id: id,
     })
+    setTrigger(false);
   }
   return (
     <Fragment>
 
       <tr>
-        <td>{firstName}</td>
-        <td>{lastName}</td>
+        <td>{employee.firstName}</td>
+        <td>{employee.lastName}</td>
         <td>
           <CurrencyFormat
             decimalScale={2}
-            value={salary}
+            value={employee.salary}
             displayType={"text"}
             thousandSeparator={true}
             prefix={"$"}
@@ -50,9 +54,10 @@ function Employee(props) {
           <button onClick={deleteEmployee}>delete</button>
         </td>
       </tr>
+
       <InlineForm
         trigger={trigger} setTrigger={setTrigger}
-        id={id}
+        employee={employeesList[id]}
       />
     </Fragment>
   )

@@ -2,7 +2,6 @@ import React from 'react'
 import { useStateValue } from '../providers/StateProvider';
 import Employee from './Employee';
 import Form from './Form';
-import InlineForm from './InlineForm';
 
 function Table(props) {
 
@@ -31,7 +30,7 @@ function Table(props) {
           {listOfEmployees}
         </tbody>
       </table>
-      <Form />
+      {/* <Form /> */}
     </div>
   )
 }
