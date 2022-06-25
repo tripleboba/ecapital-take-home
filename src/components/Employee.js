@@ -57,10 +57,10 @@ function Employee(props) {
         </td>
       </tr>
 
-      <InlineForm
+      {/* <InlineForm
         trigger={trigger} setTrigger={setTrigger}
         employee={employeesList[id]}
-      />
+      /> */}
     </Fragment>
   )
 }

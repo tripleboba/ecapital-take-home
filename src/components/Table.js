@@ -33,7 +33,7 @@ function Table(props) {
           </tbody>
         </table>
       </div>
-      {/* <Form /> */}
+      <Form />
     </div>
   )
 }

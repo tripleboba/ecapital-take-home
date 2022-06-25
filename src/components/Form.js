@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useStateValue } from '../providers/StateProvider';
 
 // SHOULD BE HIDDEN - IMPLEMENTED LATER!!!!!
 // button clicked -> inline form with save/cancel - similar to edit button
 
 export default function Form() {
-  const [{employeeList}, dispatch] = useStateValue();
+  const [{ employeeList }, dispatch] = useStateValue();
 
   const [newEmployee, setNewEmployee] = useState({
     firstName: '',
@@ -27,36 +27,44 @@ export default function Form() {
   const addEmployee = (e) => {
     e.preventDefault();
     console.log("newEmployee data from Form.js", newEmployee);
-    
+
     dispatch({
-      type: 'UPDATE_EMPLOYEESLIST',
+      type: 'ADD_EMPLOYEE',
       employee: newEmployee,
     })
   }
 
   return (
-    <div>
-      <form>
-        <input
-          type='text' name='firstName'
-          placeholder='enter first name'
-          onChange={onChangeHandler}
-        />
-        <input
-          type='text' name='lastName'
-          placeholder='enter last name'
-          onChange={onChangeHandler}
-        />
-        <input
-          type='number' name='salary'
-          placeholder='enter salary'
-          onChange={onChangeHandler}
-        />
-        <button
-          type='submit'
-          onClick={addEmployee}
-        >Add Employee</button>
-      </form>
+    <div className='field is-horizontal'>
+      <div className='field-body'>
+        <div className='field'>
+          <input className='input'
+            type='text' name='firstName'
+            placeholder='enter first name'
+            onChange={onChangeHandler}
+          />
+        </div>
+        <div className='field'>
+          <input className='input'
+            type='text' name='lastName'
+            placeholder='enter last name'
+            onChange={onChangeHandler}
+          />
+        </div>
+        <div className='field'>
+          <input className='input'
+            type='number' name='salary'
+            placeholder='enter salary'
+            onChange={onChangeHandler}
+          />
+        </div>
+        <div className='field'>
+          <button className='button is-success is-pulled-right'
+            type='submit'
+            onClick={addEmployee}
+          >Add Employee</button>
+        </div>
+      </div>
     </div>
   )
 }
