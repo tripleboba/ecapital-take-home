@@ -5,7 +5,7 @@ import CurrencyFormat from 'react-currency-format';
 
 
 function Employee(props) {
-  const { id, ...employee} = props;
+  const { id, ...employee } = props;
 
   const [{ employeesList }, dispatch] = useStateValue();
   console.log("current employeesList from Employee.js: ", employeesList);
@@ -51,16 +51,21 @@ function Employee(props) {
           />
         </td>
         <td>
-          <button
-          onClick={editEmployee}>edit</button>
-          <button onClick={deleteEmployee}>delete</button>
+          <button className='button is-link is-outlined is-small'
+            onClick={editEmployee}
+          >edit</button>
+          <button className='button is-danger is-outlined is-small ml-3'
+            onClick={deleteEmployee}
+          >delete</button>
         </td>
       </tr>
 
-      {/* <InlineForm
+      {/* bug point: using index as id delete in the midway leads to this form
+       still store deleted data for the next obj in [] */}
+      <InlineForm
         trigger={trigger} setTrigger={setTrigger}
         employee={employeesList[id]}
-      /> */}
+      />
     </Fragment>
   )
 }
